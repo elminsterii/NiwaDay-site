@@ -1,6 +1,6 @@
-# TodayLine – Google OAuth Verification Review Statement
+# Niwa Day – Google OAuth Verification Review Statement
 
-**Application Name:** TodayLine  
+**Application Name:** Niwa Day  
 **Application Type:** Desktop Application (currently available on Windows; macOS planned)  
 **Developer Contact:** elminsterii2@gmail.com  
 **Date:** April 10, 2026  
@@ -9,7 +9,7 @@
 
 ## 1. Application Overview
 
-TodayLine is a lightweight desktop application that displays a user's Google Calendar events for the current day in a semi-transparent, always-on-top floating overlay window. The purpose of the application is to provide users with a quick, at-a-glance view of their daily schedule without requiring them to open a browser or switch applications.
+Niwa Day is a lightweight desktop application that displays a user's Google Calendar events for the current day in a semi-transparent, always-on-top floating overlay window. The purpose of the application is to provide users with a quick, at-a-glance view of their daily schedule without requiring them to open a browser or switch applications.
 
 ---
 
@@ -19,21 +19,21 @@ TodayLine is a lightweight desktop application that displays a user's Google Cal
 |---|---|---|
 | `https://www.googleapis.com/auth/calendar.readonly` | Read-only | Retrieve today's calendar events for local display |
 
-TodayLine requests only **one** OAuth scope. No write, edit, delete, or administrative scopes are requested. The application adheres strictly to the principle of least privilege.
+Niwa Day requests only **one** OAuth scope. No write, edit, delete, or administrative scopes are requested. The application adheres strictly to the principle of least privilege.
 
 ---
 
 ## 3. Why This Scope Is Required
 
-The `calendar.readonly` scope is the minimum permission necessary to fulfill TodayLine's sole function: **reading calendar events to display them on the user's desktop**.
+The `calendar.readonly` scope is the minimum permission necessary to fulfill Niwa Day's sole function: **reading calendar events to display them on the user's desktop**.
 
-Without this scope, TodayLine cannot retrieve event data from the Google Calendar API and therefore cannot perform its core functionality. A narrower scope (e.g., `calendar.events.readonly`) was evaluated; however, `calendar.readonly` was selected to ensure compatibility with calendar list retrieval, which is required to allow users to choose which calendars to display.
+Without this scope, Niwa Day cannot retrieve event data from the Google Calendar API and therefore cannot perform its core functionality. A narrower scope (e.g., `calendar.events.readonly`) was evaluated; however, `calendar.readonly` was selected to ensure compatibility with calendar list retrieval, which is required to allow users to choose which calendars to display.
 
 The application does **not** request any of the following scopes, as they are unnecessary:
 
-- `calendar` (read/write) — TodayLine never modifies calendar data.
-- `calendar.events` (read/write) — TodayLine never creates, updates, or deletes events.
-- Any Drive, Gmail, or other Google service scope — TodayLine interacts only with Google Calendar.
+- `calendar` (read/write) — Niwa Day never modifies calendar data.
+- `calendar.events` (read/write) — Niwa Day never creates, updates, or deletes events.
+- Any Drive, Gmail, or other Google service scope — Niwa Day interacts only with Google Calendar.
 
 ---
 
@@ -41,20 +41,20 @@ The application does **not** request any of the following scopes, as they are un
 
 ### 4.1 Data Access Flow
 
-1. The user launches TodayLine and signs in via the standard Google OAuth 2.0 authorization flow.
-2. Upon granting permission, TodayLine calls the **Google Calendar API** (`calendar.events.list`) to retrieve the user's calendar events for the current day only (from midnight to 23:59:59 local time).
-3. The retrieved events are rendered in the TodayLine overlay window as a visual timeline.
+1. The user launches Niwa Day and signs in via the standard Google OAuth 2.0 authorization flow.
+2. Upon granting permission, Niwa Day calls the **Google Calendar API** (`calendar.events.list`) to retrieve the user's calendar events for the current day only (from midnight to 23:59:59 local time).
+3. The retrieved events are rendered in the Niwa Day overlay window as a visual timeline.
 4. API calls are repeated at a configurable interval (default: every 5 minutes) to refresh the display with any newly added or updated events.
 
 ### 4.2 Scope of Data Used
 
-TodayLine reads and displays the following fields from each calendar event:
+Niwa Day reads and displays the following fields from each calendar event:
 
 - Event title (summary)
 - Start and end date/time
 - Calendar color (for visual grouping)
 
-TodayLine does **not** read or display: event descriptions, attendee lists, conference links, attachments, recurrence rules, or any other metadata beyond what is necessary to render the timeline.
+Niwa Day does **not** read or display: event descriptions, attendee lists, conference links, attachments, recurrence rules, or any other metadata beyond what is necessary to render the timeline.
 
 ### 4.3 Local Processing Only
 
@@ -77,13 +77,13 @@ All data processing occurs **entirely on the user's local device**. Calendar dat
 | Calendar Event Data | RAM only (in-process memory) | Cleared when app is closed or data is refreshed |
 | User Identity (email) | Not stored | Never persisted |
 
-TodayLine maintains **no persistent database** of any kind. There is no server-side component, no backend infrastructure, and no cloud storage associated with TodayLine.
+Niwa Day maintains **no persistent database** of any kind. There is no server-side component, no backend infrastructure, and no cloud storage associated with Niwa Day.
 
 ---
 
 ## 6. Data Sharing
 
-TodayLine does **not** share, sell, transfer, or disclose any user data — including Google Calendar data — to any third party for any purpose. This includes:
+Niwa Day does **not** share, sell, transfer, or disclose any user data — including Google Calendar data — to any third party for any purpose. This includes:
 
 - No advertising networks or analytics platforms.
 - No crash reporting services that include user data (if crash reporting is implemented in future, it will be opt-in and anonymized).
@@ -93,7 +93,7 @@ TodayLine does **not** share, sell, transfer, or disclose any user data — incl
 
 ## 7. Compliance with Google API Services User Data Policy
 
-TodayLine's use of Google user data complies with the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the **Limited Use** requirements:
+Niwa Day's use of Google user data complies with the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the **Limited Use** requirements:
 
 - ✅ Data is used only to provide the user-facing feature described in this statement.
 - ✅ Data is not transferred to third parties except as necessary to provide the app's feature.
@@ -114,11 +114,11 @@ TodayLine's use of Google user data complies with the [Google API Services User 
 
 ## 9. User Control
 
-Users have full control over TodayLine's access to their Google account:
+Users have full control over Niwa Day's access to their Google account:
 
 - Users can **sign out** from within the application at any time, which immediately clears all stored tokens.
 - Users can **revoke access** at any time via [Google Account Permissions](https://myaccount.google.com/permissions).
-- After revocation, TodayLine cannot access any Google data until the user re-authorizes.
+- After revocation, Niwa Day cannot access any Google data until the user re-authorizes.
 
 ---
 
