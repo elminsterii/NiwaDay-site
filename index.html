@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Niwa Day – A tidy day</title>
-  <meta name="description" content="Niwa Day is a lightweight Windows desktop app that gently displays your calendar as a calm, floating timeline—keeping your day tidy and at ease." />
+  <meta name="description" content="Niwa Day is a gentle Windows desktop app that displays your Google Calendar as a soft, floating timeline — today's schedule, quietly in view." />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -37,7 +37,7 @@
       max-width: 560px;
       margin: 12px auto 0;
     }
-
+    header .platforms { margin-top: 14px; }
     /* Main */
     main {
       max-width: 840px;
@@ -269,7 +269,7 @@
 <header>
   <h1>Niwa Day</h1>
   <p class="tagline">A tidy day</p>
-  <p class="subtitle">A calm, floating timeline of your day. Quiet, gentle, always there.</p>
+  <p class="subtitle">A gentle, floating timeline of your day — quietly by your side.</p>
 </header>
 
 <main>
@@ -277,12 +277,19 @@
   <!-- About -->
   <section>
     <h2>What is Niwa Day?</h2>
-    <p class="about-text">Niwa Day is a desktop productivity application for Windows that shows your <strong>today's schedule</strong> as a vertical timeline floating on your desktop. It reads events from your connected calendar service and arranges them from 00:00 to 23:59, with a live indicator marking the current time.</p>
-    <p class="about-text">Unlike traditional calendar apps that require you to open a separate window or switch tabs, Niwa Day stays unobtrusively on top of your workspace — fully customizable in size, color, and transparency — so a quick glance is all you need to see where you are in your day.</p>
+    <p class="about-text">Niwa Day is a desktop app for Windows that gently shows today's schedule as a vertical timeline, floating softly on your desktop. It reads events from your Google Calendar and arranges them from 00:00 to 23:59, with a quiet indicator marking the current time.</p>
+    <p class="about-text">No tabs to switch. No window to open. Just look up, and your day is there — ready when you need it, out of the way when you don't.</p>
     <div style="margin-top:16px;">
       <span class="platform">🪟 Windows</span>
       <span class="platform">🍎 macOS (planned)</span>
     </div>
+  </section>
+
+  <!-- Why only today -->
+  <section>
+    <h2>Why only today?</h2>
+    <p>A whole week's worth of events can feel like noise. Niwa Day shows only the day you're actually in — so there's less to scan, less to carry, and more room for what's right in front of you.</p>
+    <p>One day at a time. That's enough.</p>
   </section>
 
   <!-- Features -->
@@ -292,50 +299,50 @@
 
       <div class="feature">
         <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+        </div>
+        <h3>Just today. Nothing else.</h3>
+        <p>No weekly grid. No future to worry about. Niwa Day shows the day you're living in — that's the whole point.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
         </div>
-        <h3>Calendar Integration</h3>
-        <p>Connects to your calendar service — currently Google Calendar — to automatically display today's events on the timeline, always in sync.</p>
+        <h3>Your Google Calendar, gently in view</h3>
+        <p>Connects to Google Calendar and shows today's events on the timeline, always in sync.</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
         </div>
-        <h3>Live Time Indicator</h3>
-        <p>A moving line marks the current time, sliding down through your day so you instantly see what's next and how much time you have.</p>
+        <h3>A line that walks with the day</h3>
+        <p>A soft time indicator drifts down the timeline as the day unfolds, showing you what's next and how much of the day is still ahead.</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
         </div>
-        <h3>Daily Recurring Events</h3>
-        <p>Set fixed daily routines (workout, meditation, reading) that appear every day — perfect for habits you don't want cluttering your calendar.</p>
+        <h3>Routines, gently built in</h3>
+        <p>Add the small rituals of your day — a morning walk, a reading hour, a quiet break — without filling up your calendar.</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M21 6.5l-4 4V7c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-3.5l4 4v-11z"/></svg>
         </div>
-        <h3>Always-on-Top Overlay</h3>
-        <p>The semi-transparent window floats above all other applications, so your schedule is never more than a glance away.</p>
+        <h3>Always near, never in the way</h3>
+        <p>The semi-transparent window rests above your other apps, so your schedule stays close without taking over your screen.</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
         </div>
-        <h3>Fully Customizable</h3>
-        <p>Adjust size, color, and transparency to fit any screen or workflow — stick it in a corner and forget about it.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
-        </div>
-        <h3>Today-Focused Design</h3>
-        <p>Shows only today's events — no weekly clutter, no future distractions. Pure focus on the here and now.</p>
+        <h3>Tune it once. Let it settle in.</h3>
+        <p>Adjust size, color, and transparency until it fits your space. Then let it quietly do its work.</p>
       </div>
 
     </div>
@@ -348,7 +355,7 @@
       <div class="step">
         <div class="step-num">1</div>
         <h3>Install Niwa Day</h3>
-        <p>Download and install Niwa Day on your Windows PC.</p>
+        <p>Download Niwa Day from the Microsoft Store. (Coming soon — we'll let you know when it's ready.)</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -357,8 +364,8 @@
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>See your day at a glance</h3>
-        <p>Your events appear instantly on the floating timeline. Customize to fit your workflow.</p>
+        <h3>Settle into your day</h3>
+        <p>Your events appear softly on the floating timeline. Adjust size, color, and transparency until it feels right.</p>
       </div>
     </div>
   </section>
@@ -366,22 +373,22 @@
   <!-- Google OAuth Scope Usage -->
   <section>
     <h2>Google Calendar Access</h2>
-    <p>Niwa Day currently integrates with <strong>Google Calendar</strong> as its calendar data source. Connection is handled through Google's official OAuth 2.0 flow, and we request only the minimum permission necessary to display your events.</p>
+    <p>Niwa Day connects to <strong>Google Calendar</strong> as its data source. The connection uses Google's official OAuth 2.0 flow, and we ask only for the minimum permission needed to show your events.</p>
 
     <div class="oauth-box">
       <p style="margin-bottom:10px;"><strong>Requested scope:</strong> <code>https://www.googleapis.com/auth/calendar.readonly</code></p>
-      <p style="font-size:0.93rem; color:#3c4043; margin-bottom:0;">This scope allows Niwa Day to <strong>read</strong> your calendar events — nothing else. Niwa Day cannot create, modify, or delete any events in your Google Calendar.</p>
+      <p style="font-size:0.93rem; color:#3c4043; margin-bottom:0;">This scope lets Niwa Day <strong>read</strong> your calendar events — and nothing more. Niwa Day cannot create, change, or remove any events in your Google Calendar.</p>
     </div>
 
-    <h3 style="margin-top:24px;">How we use this data</h3>
+    <h3 style="margin-top:24px;">How we handle your data</h3>
     <ul class="oauth-list">
-      <li>Calendar events are fetched in real time and <strong>displayed only on your local device</strong>.</li>
-      <li>No calendar data is ever stored on our servers, cached persistently, or transmitted to any third party.</li>
-      <li>OAuth tokens are stored securely using the Windows Credential Manager (or macOS Keychain) and are never sent anywhere except to Google's own API endpoints.</li>
+      <li>Calendar events are fetched in real time and <strong>shown only on your device</strong>.</li>
+      <li>No calendar data is stored on our servers, cached persistently, or shared with any third party.</li>
+      <li>OAuth tokens are kept safely in the Windows Credential Manager (or macOS Keychain), and are never sent anywhere except to Google's own API.</li>
       <li>You can revoke Niwa Day's access at any time from your <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a> page.</li>
     </ul>
 
-    <p style="margin-top:16px; font-size:0.95rem;">Niwa Day's use of information from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" style="color:#5BA8D6; text-decoration:none;">Google API Services User Data Policy</a>, including the Limited Use requirements. For full details, see our <a href="privacy-policy.html" style="color:#5BA8D6; text-decoration:none;">Privacy Policy</a>.</p>
+    <p style="margin-top:16px; font-size:0.95rem;">Niwa Day's use of information from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" style="color:#5BA8D6; text-decoration:none;">Google API Services User Data Policy</a>, including the Limited Use requirements. For full details, please see our <a href="privacy-policy.html" style="color:#5BA8D6; text-decoration:none;">Privacy Policy</a>.</p>
   </section>
 
   <!-- Legal -->
@@ -410,11 +417,18 @@
     </div>
   </section>
 
+  <!-- About the name -->
+  <section>
+    <h2>About the name</h2>
+    <p><em>Niwa</em> (庭) is Japanese for "garden" — a quiet, tended space, calm by design, always nearby.</p>
+    <p>Niwa Day brings the same feeling to your day.</p>
+  </section>
+
   <!-- Contact -->
   <section>
     <h2>Contact</h2>
     <div class="contact-box">
-      <p>Have questions about Niwa Day, privacy, or calendar integration?</p>
+      <p>If you have questions about Niwa Day, privacy, or calendar integration, we'd love to hear from you.</p>
       <p style="margin-top:8px;">📧 <a href="mailto:elminsterii2@gmail.com">elminsterii2@gmail.com</a></p>
     </div>
   </section>
