@@ -132,7 +132,7 @@
 
 <header>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective Date: April 10, 2026 &nbsp;|&nbsp; Last Updated: May 6, 2026</p>
+  <p class="meta">Effective Date: April 10, 2026 &nbsp;|&nbsp; Last Updated: May 26, 2026</p>
 </header>
 
 <main>
@@ -160,6 +160,7 @@
       <li>Rendering a timeline of today's events in the Niwa Day desktop overlay window.</li>
     </ul>
     <p>All data processing occurs <strong>locally on your device</strong>. Event data is fetched in real time, displayed immediately, and is never written to disk, cached persistently, or transmitted over the network to any server operated by Niwa Day or any third party.</p>
+    <p>Niwa Day does not collect any usage analytics, telemetry, crash reports, or device identifiers. The Application does not communicate with any servers operated by Niwa Day &mdash; the only outbound network connection is to Google's official Calendar API for fetching your events.</p>
   </section>
 
   <section>
@@ -169,7 +170,7 @@
       <li>Store your calendar events in any database, file, or cloud service.</li>
       <li>Log or record event titles, descriptions, attendees, or any other event metadata.</li>
     </ul>
-    <p>OAuth tokens are stored securely by the operating system's credential manager (e.g., Windows Credential Manager or macOS Keychain) to maintain your login across app restarts. Tokens are retained until you explicitly sign out or revoke access, and are never transmitted externally except to the calendar service's own API endpoints (e.g., Google's servers).</p>
+    <p>OAuth tokens are stored securely in the <strong>Windows Credential Manager</strong> &mdash; the operating system's built-in secure credential storage &mdash; to maintain your login across app restarts. Tokens are retained until you explicitly sign out or revoke access, and are never transmitted externally except to the calendar service's own API endpoints (e.g., Google's servers).</p>
   </section>
 
   <section>
@@ -191,7 +192,7 @@
 
   <section>
     <h2><span class="num">6.</span>Authentication &amp; Security</h2>
-    <p>Niwa Day uses the official OAuth 2.0 authorization flow provided by Google. Your account credentials (username and password) are never seen or stored by Niwa Day. Authentication is handled entirely by Google's secure login pages. OAuth tokens are stored locally using the operating system's secure credential storage (e.g., Windows Credential Manager or macOS Keychain) and are used only to make authorized API requests on your behalf.</p>
+    <p>Niwa Day uses the official OAuth 2.0 authorization flow provided by Google. Your account credentials (username and password) are never seen or stored by Niwa Day. Authentication is handled entirely by Google's secure login pages. OAuth tokens are stored locally in the Windows Credential Manager and are used only to make authorized API requests on your behalf.</p>
   </section>
 
   <section>
@@ -211,12 +212,20 @@
   </section>
 
   <section>
-    <h2><span class="num">9.</span>Changes to This Policy</h2>
+    <h2><span class="num">9.</span>Users in the European Union &amp; California</h2>
+    <p>If you are located in the European Union, you have certain rights under the General Data Protection Regulation (GDPR), including the rights to access, rectify, or erase your personal data. If you are a California resident, you have similar rights under the California Consumer Privacy Act (CCPA).</p>
+    <p>Because Niwa Day does not store any of your data on external servers and does not collect any analytics, telemetry, or device identifiers (see Section 2), there is no data on our end to access, modify, or delete. To exercise your rights regarding the calendar data accessed via Google's API, please use Google's own data management tools at <a href="https://myaccount.google.com/data-and-privacy" target="_blank">myaccount.google.com/data-and-privacy</a>.</p>
+    <p>If you have any questions about these rights, please contact us using the address in Section 11.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">10.</span>Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time, including to reflect new calendar service integrations or changes in data handling. Any changes will be reflected by updating the "Last Updated" date at the top of this page. Continued use of Niwa Day after any changes constitutes your acceptance of the updated policy.</p>
   </section>
 
   <section>
-    <h2><span class="num">10.</span>Contact</h2>
+    <h2><span class="num">11.</span>Contact</h2>
+    <p>Niwa Day is developed and operated by <strong>Jimmy Chen (elminsterii)</strong>, an independent developer based in Taiwan.</p>
     <p>If you have questions or concerns about this Privacy Policy, please contact us at: <a href="mailto:elminsterii2@gmail.com">elminsterii2@gmail.com</a></p>
   </section>
 
