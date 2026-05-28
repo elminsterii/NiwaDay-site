@@ -147,6 +147,51 @@
       color: #3c4043;
     }
 
+    /* Hero demo (text + GIF) */
+    .hero-demo {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .demo-text {
+      min-width: 0;
+    }
+    .demo-gif {
+      flex-shrink: 0;
+    }
+    .demo-gif img {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 14px;
+      box-shadow:
+        0 1px 2px rgba(91, 168, 214, 0.08),
+        0 12px 32px rgba(91, 168, 214, 0.18);
+    }
+    .demo-caption {
+      font-size: 0.82rem;
+      color: #80868b;
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    @media (max-width: 720px) {
+      .hero-demo {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .demo-gif {
+        order: -1;
+        display: flex;
+        justify-content: center;
+      }
+      .demo-gif img {
+        max-width: 280px;
+      }
+    }
+
     /* Feature grid */
     .feature-grid {
       display: grid;
@@ -358,11 +403,19 @@
 
   <!-- About -->
   <section>
-    <h2>What is Niwa Day?</h2>
-    <p class="about-text">Niwa Day is a desktop app for Windows that shows today's schedule as a vertical timeline, floating on your desktop. It reads events from your Google Calendar and arranges them from 00:00 to 23:59, with a quiet indicator marking the current time.</p>
-    <p class="about-text">No tabs to switch. No window to open. Just look up, and your day is there — ready when you need it, out of the way when you don't.</p>
-    <div style="margin-top:16px;">
-      <span class="platform">🪟 Windows</span>
+    <div class="hero-demo">
+      <div class="demo-text">
+        <h2>What is Niwa Day?</h2>
+        <p class="about-text">Niwa Day is a desktop app for Windows that shows today's schedule as a vertical timeline, floating on your desktop. It reads events from your Google Calendar and arranges them from 00:00 to 23:59, with a quiet indicator marking the current time.</p>
+        <p class="about-text">No tabs to switch. No window to open. Just look up, and your day is there — ready when you need it, out of the way when you don't.</p>
+        <div style="margin-top:16px;">
+          <span class="platform">🪟 Windows</span>
+        </div>
+      </div>
+      <div class="demo-gif">
+        <img src="niwaday_gif.gif" alt="Niwa Day in action — a floating timeline with editable routines on a Windows desktop" />
+        <p class="demo-caption">Routines, on the same timeline.</p>
+      </div>
     </div>
   </section>
 
