@@ -183,7 +183,8 @@
     .demo-gif {
       flex-shrink: 0;
     }
-    .demo-gif img {
+    .demo-gif img,
+    .demo-gif video {
       display: block;
       width: 100%;
       max-width: 320px;
@@ -210,7 +211,8 @@
         display: flex;
         justify-content: center;
       }
-      .demo-gif img {
+      .demo-gif img,
+      .demo-gif video {
         max-width: 280px;
       }
     }
@@ -437,8 +439,7 @@
       </div>
       <div class="demo-gif">
         <video autoplay loop muted playsinline width="394" height="488"
-               aria-label="Niwa Day in action — a floating vertical timeline with editable routines on a Windows desktop"
-               style="display:block; width:100%; max-width:320px;">
+               aria-label="Niwa Day in action — a floating vertical timeline with editable routines on a Windows desktop">
           <source src="niwaday_demo.mp4" type="video/mp4" />
         </video>
         <p class="demo-caption">Routines, on the same timeline.</p>
