@@ -1,0 +1,18 @@
+# Niwa Day
+
+> A free Windows desktop app that displays your Google Calendar as a floating vertical timeline — today's schedule, quietly in view.
+
+Niwa Day (庭 — Japanese for "garden") is a lightweight productivity tool for Windows. It connects to Google Calendar via read-only OAuth 2.0, renders today's events as a floating timeline, and lets you layer in personal routines alongside your calendar events. A real-time indicator tracks the current moment throughout the day.
+
+Key facts:
+- Free to download from the Microsoft Store
+- Windows only
+- Read-only Google Calendar access (no write permissions)
+- No analytics or telemetry collected
+- Developer: Jimmy Chen (Taiwan)
+
+## Pages
+
+- [Home](https://niwaday.com/): Product overview, features, how it works, and download link
+- [Privacy Policy](https://niwaday.com/privacy-policy.html): How calendar data is accessed, used, and protected
+- [Terms of Service](https://niwaday.com/terms-of-service.html): Terms governing use of Niwa Day

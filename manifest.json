@@ -1,0 +1,16 @@
+{
+  "name": "Niwa Day",
+  "short_name": "Niwa Day",
+  "description": "A Windows desktop app that displays your Google Calendar as a floating timeline.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#B7CEEB",
+  "background_color": "#0f1a24",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
