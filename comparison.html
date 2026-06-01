@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Niwa Day Compares – A tidy day</title>
+  <meta name="description" content="How Niwa Day differs from other desktop calendar apps &amp; widgets — a single-day timeline with a live &quot;now&quot; line, permanently free, with local routines that work without handing over your calendar." />
+  <link rel="canonical" href="https://niwaday.com/comparison.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#B7CEEB" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Niwa Day" />
+  <meta property="og:title" content="How Niwa Day Compares – A tidy day" />
+  <meta property="og:description" content="How Niwa Day differs from other desktop calendar apps &amp; widgets — a single-day timeline with a live &quot;now&quot; line, permanently free, with local routines." />
+  <meta property="og:url" content="https://niwaday.com/comparison.html" />
+  <meta property="og:image" content="https://niwaday.com/images/niwaday-timeline.png" />
+  <meta property="og:image:alt" content="Niwa Day floating timeline showing today's schedule" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How Niwa Day Compares – A tidy day" />
+  <meta name="twitter:description" content="How Niwa Day differs from other desktop calendar apps &amp; widgets — single-day timeline, live &quot;now&quot; line, permanently free." />
+  <meta name="twitter:image" content="https://niwaday.com/images/niwaday-timeline.png" />
+
+  <!-- Icons / PWA -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #B7CEEB 0%, #B0E0E6 100%);
+      color: #fff;
+      padding: 40px 24px 36px;
+      text-align: center;
+    }
+    header .back-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      margin-bottom: 18px;
+      transition: opacity 0.15s;
+    }
+    header .back-link:hover { opacity: 0.7; }
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    header .subtitle {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* Download button */
+    .download-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #2C7DA8;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 28px;
+      box-shadow: 0 4px 16px rgba(44,125,168,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .download-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(44,125,168,0.22);
+    }
+    .download-cta svg { width: 20px; height: 20px; fill: #2C7DA8; }
+    .download-cta .meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+      text-align: left;
+    }
+    .download-cta .meta small {
+      font-size: 0.72rem;
+      font-weight: 500;
+      opacity: 0.7;
+      letter-spacing: 0.3px;
+    }
+    .download-cta .meta strong { font-size: 0.98rem; font-weight: 600; }
+
+    /* Final CTA */
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(135deg, #EAF6FB 0%, #F4FBFD 100%);
+      border-radius: 14px;
+      padding: 40px 24px;
+      margin-top: 16px;
+    }
+    .final-cta h3 { font-size: 1.25rem; margin-bottom: 8px; color: #1a1a1a; }
+    .final-cta p { font-size: 0.95rem; color: #5f6368; margin-bottom: 22px; }
+    .final-cta .download-cta {
+      background: #5BA8D6;
+      color: #ffffff;
+      margin-top: 0;
+      box-shadow: 0 4px 16px rgba(91,168,214,0.25);
+    }
+    .final-cta .download-cta svg { fill: #ffffff; }
+    .final-cta .download-cta:hover { box-shadow: 0 8px 24px rgba(91,168,214,0.35); }
+
+    /* Main */
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid #e8eaed;
+    }
+    section:last-of-type { border-bottom: none; }
+
+    h2 { font-size: 1.5rem; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.3px; }
+    h3 { font-size: 1.05rem; color: #1a1a1a; margin-bottom: 6px; font-weight: 600; }
+    p { font-size: 1rem; color: #3c4043; margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Intro lead */
+    .lead {
+      font-size: 1.1rem;
+      color: #1a1a1a;
+      font-weight: 500;
+      border-left: 4px solid #5BA8D6;
+      padding-left: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Comparison table */
+    .comparison-wrap {
+      overflow-x: auto;
+      margin-top: 24px;
+      border-radius: 10px;
+      border: 1px solid #e8eaed;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+      font-size: 0.94rem;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid #e8eaed;
+      vertical-align: top;
+    }
+    .comparison-table thead th {
+      background: #EAF6FB;
+      font-weight: 600;
+      color: #2C7DA8;
+      white-space: nowrap;
+    }
+    .comparison-table thead th:first-child { color: #5f6368; width: 22%; }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: #5f6368;
+      font-size: 0.88rem;
+      width: 22%;
+    }
+    .comparison-table td:nth-child(2) { color: #1a1a1a; }
+    .comparison-table td:nth-child(3) { color: #5f6368; }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table tbody tr:hover td { background: #fafbfc; }
+
+    /* Key insight box */
+    .insight-box {
+      background: #EAF6FB;
+      border-left: 4px solid #5BA8D6;
+      padding: 20px 22px;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+    .insight-box p { font-size: 1rem; color: #2C7DA8; margin-bottom: 0; font-weight: 500; }
+
+    /* FAQ */
+    .faq-list { margin-top: 8px; }
+    .faq-item {
+      border: 1px solid #e8eaed;
+      border-radius: 10px;
+      padding: 22px 20px;
+      margin-bottom: 14px;
+    }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-item h3 { font-size: 1rem; color: #1a1a1a; margin-bottom: 10px; }
+    .faq-item p { font-size: 0.95rem; color: #3c4043; margin-bottom: 0; }
+    .faq-item a { color: #5BA8D6; text-decoration: none; }
+    .faq-item a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #80868b;
+      padding: 32px 24px;
+      border-top: 1px solid #e8eaed;
+      background: #f8f9fa;
+    }
+    footer a { color: #5BA8D6; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="/">← Niwa Day</a>
+  <h1>How Niwa Day Compares</h1>
+  <p class="subtitle">A single-day timeline. A live "now" line. Permanently free.</p>
+</header>
+
+<main>
+
+  <!-- Intro -->
+  <section>
+    <p class="lead">Most desktop calendar apps & widgets answer "what's on my schedule?" Niwa Day answers a different question — "where am I in my day right now?"</p>
+    <p>The result is a floating vertical timeline that shows only today, with a line that moves as the day unfolds, marking the present moment. It sits on your desktop, quietly — no window to open, no tab to switch.</p>
+    <p>Below is a clear-eyed look at how Niwa Day sits alongside other desktop calendar apps & widgets.</p>
+  </section>
+
+  <!-- Comparison table -->
+  <section>
+    <h2>Side by side</h2>
+    <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Niwa Day</th>
+            <th>Other desktop calendar apps & widgets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Main view</td>
+            <td>A single-day vertical timeline with a live, moving "now" line</td>
+            <td>Month grids, event lists, or combined agendas</td>
+          </tr>
+          <tr>
+            <td>Sense of the present moment</td>
+            <td>A moving line shows how much of today is left</td>
+            <td>Usually none — they show what's scheduled, not where you are in the day</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>Permanently free, with complete core features — no subscription, no in-app purchases</td>
+            <td>Often free trials, paywalls, or feature-limited free tiers</td>
+          </tr>
+          <tr>
+            <td>Local routines</td>
+            <td>Add one-off and repeating routines on-device, ready immediately — no cloud needed</td>
+            <td>Typically rely on a connected cloud calendar</td>
+          </tr>
+          <tr>
+            <td>Getting started</td>
+            <td>Works without signing in; connect Google Calendar only when you want</td>
+            <td>Usually require an account or calendar connection first</td>
+          </tr>
+          <tr>
+            <td>Data source</td>
+            <td>Google Calendar (read-only) + local routines</td>
+            <td>Varies — Google, Outlook, or iCloud</td>
+          </tr>
+          <tr>
+            <td>Visual style</td>
+            <td>Japanese-inspired whitespace, minimal, stays out of the way</td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td>Platform</td>
+            <td>Windows (macOS planned)</td>
+            <td>Varies</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Key insight -->
+  <section>
+    <h2>The clearest difference</h2>
+    <p>Where other desktop calendar apps & widgets put a calendar on your desktop, Niwa Day puts a progress bar for your day.</p>
+    <div class="insight-box">
+      <p>The single-day timeline with a live "now" line is the heart of the product — a quiet sense of pace, not just a list of events.</p>
+    </div>
+    <p style="margin-top:20px;">The "now" line moves continuously throughout the day, showing you how much of your day remains and what's coming next. Combined with personal routines — walks, focus blocks, a lunch break — you get a picture of the whole day, not just the meetings.</p>
+    <p>And because Niwa Day is permanently free with all core features, there's no trial clock to worry about — it simply settles into your desktop and stays there.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Common questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3>How is Niwa Day different from other desktop calendar apps & widgets?</h3>
+        <p>Where other desktop calendar apps & widgets show a calendar on your desktop — typically a week or month view, event lists, or an agenda — Niwa Day shows a single-day vertical timeline with a live "now" line. The focus is not on what's scheduled in the future, but on where you are in your day right now. It also adds personal routines you can place on the timeline without touching your calendar.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Niwa Day free?</h3>
+        <p>Yes. Niwa Day is permanently free with complete core features — no subscription, no trial period, no in-app purchases. It is available on the <a href="https://apps.microsoft.com/detail/9p0dnstkknp7" target="_blank" rel="noopener">Microsoft Store</a> at no cost.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need to connect a calendar to use Niwa Day?</h3>
+        <p>No. Niwa Day works straight away without a calendar connection. You can add personal routines to the timeline immediately. Connecting Google Calendar is optional — when you do, your calendar events appear alongside your routines on the same timeline, read-only, without any changes to your calendar.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does Niwa Day show my whole week or month?</h3>
+        <p>No. Niwa Day shows only today. A full week of events can feel like noise — Niwa Day narrows the view to the day you're actually in, so there's less to scan and more room for what's right in front of you.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What platforms does Niwa Day support?</h3>
+        <p>Niwa Day is currently available on Windows (Windows 10 and 11), free on the Microsoft Store. A macOS version is planned for the future.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section>
+    <div class="final-cta">
+      <h3>Ready to settle into your day?</h3>
+      <p>Niwa Day is free on the Microsoft Store.</p>
+      <a class="download-cta" href="https://apps.microsoft.com/detail/9p0dnstkknp7" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+        <span class="meta">
+          <small>GET IT FROM</small>
+          <strong>Microsoft Store</strong>
+        </span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p style="margin-bottom:10px; font-style:italic; color:#9aa0a6;">Niwa (庭) is Japanese for "garden."</p>
+  &copy; 2026 Niwa Day. All rights reserved. &nbsp;|&nbsp;
+  <a href="/">Home</a> &nbsp;·&nbsp;
+  <a href="comparison.html">Compare</a> &nbsp;·&nbsp;
+  <a href="privacy-policy.html">Privacy</a> &nbsp;·&nbsp;
+  <a href="terms-of-service.html">Terms</a>
+</footer>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is Niwa Day different from other desktop calendar apps & widgets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Where other desktop calendar apps & widgets show a calendar on your desktop — typically a week or month view, event lists, or an agenda — Niwa Day shows a single-day vertical timeline with a live \"now\" line. The focus is not on what's scheduled in the future, but on where you are in your day right now. It also adds personal routines you can place on the timeline without touching your calendar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Niwa Day free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Niwa Day is permanently free with complete core features — no subscription, no trial period, no in-app purchases. It is available on the Microsoft Store at no cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to connect a calendar to use Niwa Day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Niwa Day works straight away without a calendar connection. You can add personal routines to the timeline immediately. Connecting Google Calendar is optional — when you do, your calendar events appear alongside your routines on the same timeline, read-only, without any changes to your calendar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Niwa Day show my whole week or month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Niwa Day shows only today. A full week of events can feel like noise — Niwa Day narrows the view to the day you're actually in, so there's less to scan and more room for what's right in front of you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What platforms does Niwa Day support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Niwa Day is currently available on Windows (Windows 10 and 11), free on the Microsoft Store. A macOS version is planned for the future."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

@@ -30,5 +30,6 @@ Key facts:
 ## Pages
 
 - [Home](https://niwaday.com/): Product overview, features, how it works, and download link
+- [How Niwa Day Compares](https://niwaday.com/comparison.html): How Niwa Day differs from other desktop calendar apps & widgets — single-day timeline, the live "now" line, permanently free, and local routines
 - [Privacy Policy](https://niwaday.com/privacy-policy.html): How calendar data is accessed, used, and protected
 - [Terms of Service](https://niwaday.com/terms-of-service.html): Terms governing use of Niwa Day
