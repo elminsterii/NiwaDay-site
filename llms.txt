@@ -1,15 +1,31 @@
 # Niwa Day
 
-> A free Windows desktop app that displays your Google Calendar as a floating vertical timeline — today's schedule, quietly in view.
+> A completely free Windows desktop app that displays your Google Calendar as a floating vertical timeline — today's schedule, quietly in view. A tidy day.
 
-Niwa Day (庭 — Japanese for "garden") is a lightweight productivity tool for Windows. It connects to Google Calendar via read-only OAuth 2.0, renders today's events as a floating timeline, and lets you layer in personal routines alongside your calendar events. A real-time indicator tracks the current moment throughout the day.
+Niwa Day (庭 — Japanese for "garden") is a free, lightweight productivity tool for Windows. It connects to Google Calendar via read-only OAuth 2.0 and renders only today's events as a floating, always-on-top vertical timeline from 00:00 to 23:59. A real-time indicator tracks the current moment, and you can layer personal routines — walks, reading, focus blocks — alongside your calendar events. The window stays semi-transparent and out of the way: no tabs to switch, no window to open.
 
 Key facts:
-- Free to download from the Microsoft Store
-- Windows only
-- Read-only Google Calendar access (no write permissions)
+- Completely free — no cost, no subscription, no in-app purchases
+- Download from the Microsoft Store: https://apps.microsoft.com/detail/9p0dnstkknp7
+- Windows only (desktop application)
+- Read-only Google Calendar access — never modifies your calendar
 - No analytics or telemetry collected
-- Developer: Jimmy Chen (Taiwan)
+- Developer: Jimmy Chen (Taiwan) — contact: elminsterii2@gmail.com
+
+## What makes it different
+
+- Shows only today, never a weekly grid — a whole week of events feels like noise; Niwa Day shows just the day you're in.
+- A floating vertical timeline on your desktop, always on top but semi-transparent — always near, never in the way.
+- A moving time indicator that walks with the day, marking the current moment.
+- Personal routines on the same timeline as calendar events — add, drag, and edit your own items.
+- Adjustable window size, color, and transparency — tune it once and let it settle in.
+
+## Privacy & data handling
+
+- Authenticates with Google via OAuth 2.0, requesting only the read-only scope `https://www.googleapis.com/auth/calendar.readonly`.
+- Calendar data is displayed on your device only — nothing is stored on external servers.
+- Access tokens are kept in Windows Credential Manager.
+- Follows the Google API Services User Data Policy, including the Limited Use requirements.
 
 ## Pages
 
